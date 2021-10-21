@@ -25,11 +25,16 @@ const underagePriceRounded = underagePrice.toFixed(2);
 const adultPrice = normalPrice - adultDiscount;
 let adultPriceRounded = adultPrice.toFixed(2);
 
+
 //output
 if (age <= 18) {
     document.getElementById('result').innerHTML = `Il prezzo del biglietto è ${underagePriceRounded}€`;
 } else if (age >= 65) {
     document.getElementById('result').innerHTML = 'Il prezzo del biglietto è ' + adultPriceRounded + '€';
-} else {
+} else if ((age >= 19) || (age <=64)){
     document.getElementById('result').innerHTML = `Il prezzo del biglietto è ${normalPriceRounded}€`
+} else {
+    document.getElementById('result').innerHTML = `Hai inserito valori sbagliati, Riprova`
 }
+
+
