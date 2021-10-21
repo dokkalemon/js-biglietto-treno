@@ -10,6 +10,10 @@ console.log('Età Viaggiatore', age);
 console.log(typeof age);
 
 //prezzo biglietto
+let price = distance * 0.21;
+console.log(price);
+console.log(typeof price);
+
 //sconto 20% se minorenne
 //sconto 40% se over 65
 // calcolo prezzo finale
