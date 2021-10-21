@@ -13,13 +13,13 @@ const kmAdultPrice = kmNormalPrice - (kmNormalPrice * 0.4);
 
 //prezzo biglietti
 const normalTicket = distance * kmNormalPrice;
-const normalTicketRounded = normalTicket.toFixed(2)
+const normalTicketRounded = normalTicket.toFixed(2);
 
 const underageTicket = distance * kmUnderagePrice;
-const underageTicketRounded = underageTicket.toFixed(2)
+const underageTicketRounded = underageTicket.toFixed(2);
 
 const adultTicket = distance * kmAdultPrice;
-const adultTicketRounded = adultTicket.toFixed(2)
+const adultTicketRounded = adultTicket.toFixed(2);
 
 //output
 
