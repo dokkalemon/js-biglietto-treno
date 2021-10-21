@@ -1,6 +1,7 @@
 //chiedere numero di chilometri
 const distance = parseInt( prompt('Quanti chilometri devi percorrere?') );
 
+console.log(isNaN(distance))
 //chidere età del passeggero
 const age = parseInt( prompt('Quale è la tua età?'));
 
@@ -25,16 +26,17 @@ const underagePriceRounded = underagePrice.toFixed(2);
 const adultPrice = normalPrice - adultDiscount;
 let adultPriceRounded = adultPrice.toFixed(2);
 
-
 //output
-if (age <= 18) {
+if ((isNaN(distance) == true) || (isNaN(age) == true)) {
+    alert('Inserisci i valori in numeri');
+    document.getElementById('result').innerHTML = `Prezzo non Calcolabile`
+} else if (age <= 18) {
     document.getElementById('result').innerHTML = `Il prezzo del biglietto è ${underagePriceRounded}€`;
 } else if (age >= 65) {
     document.getElementById('result').innerHTML = 'Il prezzo del biglietto è ' + adultPriceRounded + '€';
 } else if ((age >= 19) || (age <=64)){
     document.getElementById('result').innerHTML = `Il prezzo del biglietto è ${normalPriceRounded}€`
-} else {
-    document.getElementById('result').innerHTML = `Hai inserito valori sbagliati, Riprova`
-}
+} 
+
 
 
